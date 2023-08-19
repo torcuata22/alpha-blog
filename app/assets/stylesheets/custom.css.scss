@@ -1,0 +1,23 @@
+@import "bootstrap";
+
+.navbar {
+    background-color: #131314 !important;
+}
+
+.nav-link {
+    color: white !important;
+}
+
+.navbar #logo {
+    float: left;
+    font-size: 1.5rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-weight: bold;
+}
+
+.custom-hero {
+    background-color: #d7d8da; /* Light gray background color */
+  }
