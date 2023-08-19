@@ -1,14 +1,20 @@
 <div class="container" id="home-container">    
-    
-    <div class="hero custom-hero">
-        <h1 class="display-4">Welcome to my blog!</h1>
+  <div class="page-content">
+    <div class="hero custom-hero p-5 text-center shadow-lg rounded shadow-lg">
+        <br><br><br><br><br><br><br><br>
+        <h1 class="display-4">Welcome Freya's Blog!</h1>
         <p class="lead">This is a simple hero unit</p>
-        <hr class="my-4">
         <p>It uses utility classes for whatever....</p>
-        <a href="" class="btn btn-dark btn-lg text-white mb-5 mx-5">Read more</a>
-
+        <a href="" class="btn btn-light btn-sm mb-5 mx-5">Sign Up!</a>
     </div>
+  </div>  
 </div>
 
-<%= link_to 'Articles List', articles_path %>
-<%= link_to 'About Me', about_path %>
+<!-- <%= link_to 'Articles List', articles_path %>
+<%= link_to 'About Me', about_path %> -->
+
+<footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
+    <div class="container text-center">
+        <small>Copyright &copy; <%= link_to "Marilyn Marquez", class:"footer-text" %></small>
+    </div>
+</footer>

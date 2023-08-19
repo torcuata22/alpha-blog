@@ -1,17 +1,27 @@
 @import "bootstrap";
 
+html, body {
+    height:100%;
+    background-color: rgb(243, 237, 234);
+}
+
+.page-content{
+    flex: 1 0 auto;
+    background-color: rgb(214, 201, 193) !important;
+}
+
 .navbar {
-    background-color: #131314 !important;
+    background-color: #3e2727 !important;
 }
 
 .nav-link {
-    color: white !important;
+    color: rgb(214, 201, 193) !important;
 }
 
 .navbar #logo {
     float: left;
     font-size: 1.5rem;
-    color: #fff;
+    color: rgb(214, 201, 193);
     text-transform: uppercase;
     letter-spacing: -1px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
@@ -19,5 +29,26 @@
 }
 
 .custom-hero {
-    background-color: #d7d8da; /* Light gray background color */
+    background-image: asset-url('pens.jpeg');
+    color: white;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px
+    
   }
+
+  .footer-text {
+    color: rgb(214, 201, 193);
+  }
+
+#home-container {
+   margin-top: 25px; 
+}
+
+#sticky-footer {
+    background-color: #3e2727 !important;
+    flex-shrink: none;
+
+}
+
