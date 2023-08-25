@@ -1,35 +1,30 @@
 
-<% if @article.errors.any? %>
-    <h3>The following errors prevented your article edits from saving:</h3>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+<div class="container">
+    <div class="row justify-content-center">
+        <%= render 'shared/errors' %>
+        <div class="col-10">
+            
+            <%= form_with(model: @article,local: true, data: { turbo: false }) do |f| %>
+                <div class="row form-group">
+                    <%= f.label :title, class:"col-2 col-form-label form-label-text fw-bold" %>
+                    <div class="col-10">
+                        <%= f.text_field :title, class:"form-control shadow", placeholder:"Article title" %>
+                    </div>
 
-<div class="row justify-content-center">
-    <div class="col-10">
-        <%= form_with(model: @article,local: true, data: { turbo: false }) do |f| %>
-            <div class="row form-group">
-                <%= f.label :title, class:"col-2 col-form-label form-label-text fw-bold" %>
-                <div class="col-10">
-                    <%= f.text_field :title, class:"form-control shadow", placeholder:"Article title" %>
                 </div>
 
+                <div class="row form-group">
+                        <%= f.label :description, class:"col-2 col-form-label form-label-text fw-bold" %><br>
+                        <div class="col-10">
+                            <%= f.text_area :description, rows:10, class:"form-control mt-3 shadow",placeholder:"Article description" %>
+                        </div>
+                    
+                </div>
+                        <%= f.submit class:"btn btn-article btn-lg mt-3" %>
+                        <%= link_to 'Back to Articles List', articles_path, class: "btn btn-article btn-lg mt-3" %>
             </div>
-
-            <div class="row form-group">
-                    <%= f.label :description, class:"col-2 col-form-label form-label-text fw-bold" %><br>
-                    <div class="col-10">
-                        <%= f.text_area :description, rows:10, class:"form-control mt-3 shadow",placeholder:"Article description" %>
-                    </div>
-                
-            </div>
-                    <%= f.submit class:"btn btn-article btn-lg mt-3" %>
-                    <%= link_to 'Back to Articles List', articles_path, class: "btn btn-article btn-lg mt-3" %>
         </div>
-    </div>
-    <% end %>
+        <% end %>
 
+    </div>
 </div>

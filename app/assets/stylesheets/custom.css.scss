@@ -5,7 +5,7 @@ html, body {
     background-color: rgb(243, 237, 234);
 }
 
-h1 {
+h2 {
     color: #3e2727;
     font-family:fantasy;
 }
@@ -43,7 +43,7 @@ h1 {
 .custom-hero {
     background-image: asset-url('pens.jpeg');
     color: rgb(251, 247, 238);
-    text-shadow: 2px 2px  #3e2727;
+    text-shadow: 3px 3px  #3e2727;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -51,8 +51,14 @@ h1 {
     
   }
 
+  .hero-text {
+    color: rgb(247, 233, 224);
+    font-family:fantasy;
+  }
+
   .btn-text {
     text-shadow: 0.1px 0.1px #3e2727;
+    font-family:fantasy;
   }
 
   .footer-text {
