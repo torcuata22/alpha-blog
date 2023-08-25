@@ -5,6 +5,18 @@ html, body {
     background-color: rgb(243, 237, 234);
 }
 
+h1 {
+    color: #3e2727;
+    font-family:fantasy;
+}
+
+.btn-article {
+    background-color: #3e2727;
+    color:rgb(214, 201, 193);
+    font-family:fantasy;
+}
+
+
 .page-content{
     flex: 1 0 auto;
     background-color: rgb(214, 201, 193) !important;
@@ -24,13 +36,14 @@ html, body {
     color: rgb(214, 201, 193);
     text-transform: uppercase;
     letter-spacing: -1px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
+    font-family:fantasy;
     font-weight: bold;
 }
 
 .custom-hero {
     background-image: asset-url('pens.jpeg');
-    color: white;
+    color: rgb(251, 247, 238);
+    text-shadow: 2px 2px  #3e2727;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,9 +51,19 @@ html, body {
     
   }
 
+  .btn-text {
+    text-shadow: 0.1px 0.1px #3e2727;
+  }
+
   .footer-text {
     color: rgb(214, 201, 193);
   }
+
+.title-text {
+    color:#3e2727;
+    font-family: fantasy;
+}
+
 
 #home-container {
    margin-top: 25px; 
