@@ -17,7 +17,7 @@
             <%= link_to 'Edit', edit_article_path(article), class:"btn btn-sm btn-outline-success" %>
             <%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-sm btn-outline-danger" %>
           </div>
-          <div class="card-footer text-body-secondary">
+          <div class="card-footer text-body-secondary text-center card-text">
             <small>
               Created <%= time_ago_in_words(article.created_at) %> ago,
               edited <%= time_ago_in_words(article.updated_at) %> ago
@@ -32,11 +32,11 @@
 
 
 <br>
-<p>
-  <%= link_to 'Home Page', root_path %> | 
+<p class="text-center card-text">
+  <%= link_to 'Home Page', root_path, class: "btn btn-article btn-lg mt-3" %> | 
 
 
-  <%= link_to 'Create New Article', new_article_path %>
+  <%= link_to 'Create New Article', new_article_path, class: "btn btn-article btn-lg mt-3" %>
 </p>
 
 

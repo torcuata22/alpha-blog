@@ -1,28 +1,8 @@
-<h1>Create a new article</h1>
+<div class="container mt-5 text-center">
 
-<% if @article.errors.any? %>
-    <h3>The following errors prevented your article form saving:</h3>
-    <ul>
-        <% @article.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-        <% end %>
-    </ul>
-<% end %>
+    <h1>Create a new article</h1>
 
-<%= form_with scope: :article, data: { turbo: false }, url: articles_path, local: true do |f| %>
-<p>
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-</p>
+    <%= render 'form' %>
 
-<p>
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-</p>
+</div>
 
-<p>
-    <%= f.submit %>
-</p>
-<% end %>
-
-<%= link_to 'Back to Articles List', articles_path %>
