@@ -7,17 +7,15 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <%= link_to "Articles", articles_path, data: { turbo: false }, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Articles
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
+              <%= link_to "Create new article", new_article_path, class:'dropdown-item' %>
+              <%= link_to "View Articles", articles_path, class:'dropdown-item'  %>
               <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
@@ -35,8 +33,3 @@
     </div>
   </nav>
 
-  <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom">
-    <div class="container text-center">
-        <small>Copyright &copy; <%= link_to "Marilyn Marquez", class:"footer-text" %></small>
-    </div>
-</footer>
