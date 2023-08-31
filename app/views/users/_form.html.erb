@@ -1,0 +1,39 @@
+
+<div class="container">
+    <div class="row justify-content-center">
+        <%= render 'shared/errors', obj: @user %>
+        <div class="col-10">
+            
+            <%= form_with(model: @user,local: true, data: { turbo: false }) do |f| %>
+                <div class="row form-group">
+                    <%= f.label :username, class:"col-2 col-form-label form-label-text fw-bold" %>
+                    <div class="col-10">
+                        <%= f.text_field :username, class:"form-control shadow", placeholder:"Enter your username" %>
+                    </div>
+
+                </div>
+
+                <div class="row form-group">
+                        <%= f.label :email, class:"col-2 col-form-label form-label-text fw-bold" %><br>
+                        <div class="col-10">
+                            <%= f.email_field :email, class:"form-control mt-3 shadow",placeholder:"Enter your email address" %>
+                        </div>
+                    
+                </div>
+
+                <div class="row form-group">
+                    <%= f.label :password, class:"col-2 col-form-label form-label-text fw-bold" %><br>
+                    <div class="col-10">
+                        <%= f.password_field :password, class:"form-control mt-3 shadow",placeholder:"Choose a password" %>
+                    </div>
+                
+                </div>
+
+                        <%= f.submit class:"btn btn-article btn-lg mt-3" %>
+                        <%= link_to 'Back to Articles List', articles_path, class: "btn btn-article btn-lg mt-3" %>
+            </div>
+        </div>
+        <% end %>
+
+    </div>
+</div>
