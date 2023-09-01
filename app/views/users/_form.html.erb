@@ -29,7 +29,7 @@
                 
                 </div>
 
-                        <%= f.submit 'Sign up', class:"btn btn-article btn-lg mt-3" %>
+                        <%= f.submit(@user.persisted? ? 'Update Account' : "Sign Up", class:"btn btn-article btn-lg mt-3") %>
                         
             </div>
         </div>
