@@ -2,42 +2,10 @@
 <div class="container">
 <h1 class="text-center mt-5">My Articles</h1>
 
-<div class="container">
-  <% @articles.each do |article| %>
-    <div class="row justify-content-md-center">
-      <div class="col-8">
-        <div class="card text-center mt-4 shadow rounded">
-          <div class="card-header fst-italic">
-            Author: <%= article.user.username if article.user %>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title"><td><%= link_to article.title, article_path(article), class:"title-text" %></td></h5>
-            <p class="card-text"><td><%= truncate(article.description, length:75)%></td></p>
-            <%= link_to 'View', article_path(article), class:"btn btn-sm btn-outline-secondary" %>
-            <%= link_to 'Edit', edit_article_path(article), class:"btn btn-sm btn-outline-success" %>
-            <%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-sm btn-outline-danger" %>
-          </div>
-          <div class="card-footer text-body-secondary text-center card-text">
-            <small>
-              Created <%= time_ago_in_words(article.created_at) %> ago,
-              edited <%= time_ago_in_words(article.updated_at) %> ago
-            </small>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
-</div>
+<%= render 'article' %>
 
 
 
-<br>
-<p class="text-center card-text">
-  <%= link_to 'Home Page', root_path, class: "btn btn-article btn-lg mt-3" %> 
-
-
-  <%= link_to 'Create New Article', new_article_path, class: "btn btn-article btn-lg mt-3" %>
-</p>
 
 
 </div>
