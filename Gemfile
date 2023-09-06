@@ -9,6 +9,9 @@ gem "rails", "~> 7.0.6"
 #Bootstrap:
 gem 'bootstrap', '~> 5.3', '>= 5.3.1'
 
+#will_paginate:
+gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
