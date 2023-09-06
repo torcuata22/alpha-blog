@@ -16,13 +16,15 @@
             <ul class="dropdown-menu">
               <%= link_to "Create new article", new_article_path, class:'dropdown-item' %>
               <%= link_to "View Articles", articles_path, class:'dropdown-item'  %>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <%= link_to 'Login', login_path, class:"nav-link" %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'Logout', logout_path, class:"nav-link",  data: { turbo_method: :delete } %>
           </li>
         </ul>
         <form class="d-flex" role="search">

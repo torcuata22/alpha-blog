@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   #form looks for users path to submit form when completed, so we need this:
   #post 'users', to: 'users#create'
-  #or I can get all the routes set up automatically (except the signup one I already have):
+  #or I can get all the routes set up automatically (except the signup one I already have): 
   resources :users, except: [:new]
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
