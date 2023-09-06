@@ -5,7 +5,9 @@
         <div class="col-8">
           <div class="card text-center mt-4 shadow rounded">
             <div class="card-header fst-italic">
-              Author: <%= article.user.username if article.user %>
+              <% if article.user %>
+                Author: <%= link_to article.user.username, user_path(article.user)  %>
+              <% end %>
             </div>
             <div class="card-body">
               <h5 class="card-title"><td><%= link_to article.title, article_path(article), class:"title-text" %></td></h5>
