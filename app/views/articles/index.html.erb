@@ -1,6 +1,6 @@
 
 <div class="container">
-<h2 class="text-center mt-5">My Articles</h2>
+<h2 class="text-center mt-5">Articles</h2>
 
 <div class="flickr_pagination">
     <%= will_paginate @articles, :container => false %>
@@ -8,7 +8,7 @@
 
 <%= render 'article' %>
 
-<div class="flickr_pagination mb-4">
+<div class="flickr_pagination mb-5">
     <%= will_paginate @articles, :container => false %>
 </div>
 
