@@ -19,7 +19,10 @@
                 </h5>
                 <p class="card-text"><td><%= pluralize(user.articles.count, "article") %></td></p>
                 <%= link_to 'View Profile', user, class:"btn btn-sm btn-outline-secondary" %>
-                <%= link_to 'Edit Profile', edit_user_path(user), class:"btn btn-sm btn-outline-success" %>
+                
+                <% if logged_in? && user == current_user %>
+                    <%= link_to 'Edit Profile', edit_user_path(user), class:"btn btn-sm btn-outline-success" %>
+                <% end %>
                 </div>
                 <div class="card-footer text-body-secondary text-center card-text">
                 <small>

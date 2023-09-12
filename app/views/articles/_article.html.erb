@@ -13,8 +13,12 @@
               <h5 class="card-title"><td><%= link_to article.title, article_path(article), class:"title-text" %></td></h5>
               <p class="card-text"><td><%= truncate(article.description, length:75)%></td></p>
               <%= link_to 'View', article_path(article), class:"btn btn-sm btn-outline-secondary" %>
-              <%= link_to 'Edit', edit_article_path(article), class:"btn btn-sm btn-outline-success" %>
-              <%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-sm btn-outline-danger" %>
+              
+              <% if logged_in? && article.user == current_user %>
+                <%= link_to 'Edit', edit_article_path(article), class:"btn btn-sm btn-outline-success" %>
+                <%= link_to 'Delete', article_path(article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-sm btn-outline-danger" %>
+              <% end %>
+            
             </div>
             <div class="card-footer text-body-secondary text-center card-text">
               <small>
