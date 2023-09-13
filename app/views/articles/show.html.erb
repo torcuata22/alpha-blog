@@ -10,7 +10,7 @@
         <div class="card-body">
           <div class="card-text text-start"><td><%= simple_format(@article.description) %></td></div>
           
-          <% if logged_in? && @article.user == current_user %>
+          <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
           <%= link_to 'Edit', edit_article_path(@article), class:"btn btn-sm btn-outline-success" %>
           <%= link_to 'Delete', article_path(@article), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class:"btn btn-sm btn-outline-danger" %>
           <% end %>

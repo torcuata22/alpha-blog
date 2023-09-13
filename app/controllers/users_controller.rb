@@ -43,7 +43,7 @@ class UsersController < ApplicationController
     @user.destroy
     session[:user_id] = nil #to prevent session's user id to be set to the id of a deleted user
     flash[:notice] = "Account and all associated articles successfully deleted"
-    redirect_to root_path
+    redirect_to users_path
   end
 
   private
@@ -58,7 +58,7 @@ class UsersController < ApplicationController
   end
   
   def require_same_user
-    if current_user != @user
+    if current_user != @user && !current_user.admin?
       flash[:alert] = "You can only edit or delete your own articles"
       redirect_to @user
     end
