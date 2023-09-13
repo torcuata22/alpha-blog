@@ -32,7 +32,8 @@
               </a>
               <ul class="dropdown-menu">  
                 <%= link_to "View Your Profile", user_path(current_user), class:'dropdown-item' %>
-                <%= link_to "Edit Your Profile", edit_user_path(current_user), class:'dropdown-item'  %>
+                <%= link_to "Edit Your Profile", edit_user_path(current_user), class:'dropdown-item' %>
+                <%= link_to "Delete Profile", user_path(current_user), class:'dropdown-item text-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>  
               </ul>
             </li>
 
