@@ -251,7 +251,7 @@ DEPENDENCIES
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
-  pg
+  pg (~> 1.5, >= 1.5.4)
   puma (~> 5.0)
   rails (~> 7.0.6)
   redis (~> 4.0)
