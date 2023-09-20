@@ -41,11 +41,14 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    session[:user_id] = nil if @user == current_user #to prevent session's user id to be set to the id of a deleted user we set it to nil, to avoide admin being logged out, we added if.
+    session[:user_id] = nil if @user == current_user #to prevent session's user id to be set to the id of a deleted user we set it to nil, to avoid admin being logged out, we added if.
     flash[:notice] = "Account and all associated articles successfully deleted"
     redirect_to users_path
   end
 
+  def admin?
+    self.admin
+  end
   private
 
   def user_params
