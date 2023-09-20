@@ -3,9 +3,9 @@
 one:
   title: Example Article 1
   description: This is an example article.
-  user: one
+
 
 two:
   title: Example Article 1
   description: This is example article 2.
-  user: two
+
