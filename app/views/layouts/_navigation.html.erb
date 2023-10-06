@@ -30,13 +30,12 @@
             </a>
             <ul class="dropdown-menu">
               <% if logged_in? && current_user.admin? %>
-                <%= link_to "Create new category", new_category _path, class:'dropdown-item' %>
+                <%= link_to "Create new category", new_category_path, class:'dropdown-item' %>
               <% end %>
               <%= link_to "View Categories", categories_path, class:'dropdown-item'  %>
 
             </ul>
           </li>
-
 
           <% if logged_in? %>
 
@@ -50,7 +49,6 @@
                 <%= link_to "Delete Profile", user_path(current_user), class:'dropdown-item text-danger', data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>  
               </ul>
             </li>
-
 
             <li class="nav-item">
               <%= link_to 'Logout', logout_path, class:"nav-link",  data: { turbo_method: :delete } %>

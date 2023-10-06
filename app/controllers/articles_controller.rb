@@ -21,6 +21,7 @@ class ArticlesController < ApplicationController
     end
 
     def create
+      binding.break
       @article = Article.new(article_params)
       @article.user = current_user #use current_user method instead of hard coding
       if @article.save
@@ -54,7 +55,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params
-      params.require(:article).permit(:title, :description)
+      params.require(:article).permit(:title, :description, category_ids: [])
     end
 
     def require_same_user

@@ -10,16 +10,22 @@
                     <div class="col-10">
                         <%= f.text_field :title, class:"form-control shadow", placeholder:"Article title" %>
                     </div>
-
                 </div>
 
                 <div class="row form-group">
-                        <%= f.label :description, class:"col-2 col-form-label form-label-text fw-bold" %><br>
-                        <div class="col-10">
-                            <%= f.text_area :description, rows:10, class:"form-control mt-3 shadow",placeholder:"Article description" %>
-                        </div>
-                    
+                    <%= f.label :description, class:"col-2 col-form-label form-label-text fw-bold" %><br>
+                    <div class="col-10 mb-4">
+                        <%= f.text_area :description, rows:10, class:"form-control mt-3 shadow",placeholder:"Article description" %>
+                    </div>                    
                 </div>
+
+                <div class="row form-group">
+                    <%= f.label :category_ids, class: "col-2 col-form-label form-label-text fw-bold" %><br>
+                    <div class="col-10">
+                      <%= f.collection_select :category_ids, Category.all, :id, :name, 
+                      { prompt: "Please select your categories (this sectionc an be empty)"}, {multiple: true, size: 5, class: "custom-select, form-control shadow" } %>
+                    </div>
+                  </div>
                         <%= f.submit class:"btn btn-article btn-lg mt-3" %>
                         <%= link_to 'Back to Articles List', articles_path, class: "btn btn-article btn-lg mt-3" %>
             </div>
