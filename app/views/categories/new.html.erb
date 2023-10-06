@@ -12,10 +12,13 @@
   </div>
 <% end %>
 
+<div class="container">
+
 <%= form_with(model: @category, local: true) do |form| %>
   <!-- Your form fields here -->
   <%= form.label :name %>
   <%= form.text_field :name, class: 'form-control' %>
   
-  <%= form.submit 'Create Category', class: 'btn btn-primary' %>
+  <%= form.submit 'Create Category', class: 'btn btn-outline-dark mt-2' %>
 <% end %>
+</div>
