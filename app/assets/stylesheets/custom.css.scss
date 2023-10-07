@@ -75,6 +75,11 @@ h2, h3 {
     font-family: fantasy;
 }
 
+.bg-pill {
+  background-color: #3e2727;
+  text-decoration: none;
+}
+
 
 #home-container {
    margin-top: 25px; 
@@ -85,6 +90,7 @@ h2, h3 {
     flex-shrink: none;
 
 }
+
 
 /*Pagination Styling*/
 
