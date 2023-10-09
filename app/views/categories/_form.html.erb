@@ -1,0 +1,10 @@
+<div class="container">
+
+    <%= form_with(model: @category, local: true) do |form| %>
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %>
+    
+    <%= form.submit 'Done', class: 'btn btn-outline-dark mt-2' %>
+    <% end %>
+
+</div>

@@ -11,12 +11,10 @@
     </div>
   </div>
 <% end %>
-
 <div class="container mt-5">
-  <h2>Create New Category</h2>
-  <%= render 'form' %>
+    <h2>Edit Category</h2>
+    <%= render 'form' %>
 </div>
-
 <div class="mb-3 text-center">
-  <%= link_to '[Cancel and return to Categories list]', categories_path, class:'text-secondary' %>
+    <%= link_to '[Cancel and return to Category]', category_path(@category), class:'text-secondary' %>
 </div>
