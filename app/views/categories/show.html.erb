@@ -4,4 +4,24 @@
 
 <h2 class="mb-3">Category: <%= @category.name %></h2>
 
+<% if logged_in?  && current_user.admin?%>
+    <div class="text-center mt-4">
+        <%= link_to "Edit category name", edit_category_path(@category), class:"btn btn-sm btn-outline-secondary" %>
+    </div>
+<% end %>
+   
+
+    <h3 class="mt-5">Articles</h3>
+
+    <div class="flickr_pagination">
+        <%= will_paginate @articles, :container => false %>
+    </div>
+
+    <%= render 'articles/article' %>
+
+    <div class="flickr_pagination mb-4">
+        <%= will_paginate @articles, :container => false %>
+    </div>
+
+
 </div>
