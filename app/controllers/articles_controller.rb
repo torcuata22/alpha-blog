@@ -6,10 +6,10 @@ class ArticlesController < ApplicationController
 
     def index
         @articles = Article.paginate(:page => params[:page], :per_page => 5)
-        
+
     end
-    
-    def show   
+
+    def show
     end
 
     def new
@@ -21,25 +21,25 @@ class ArticlesController < ApplicationController
     end
 
     def create
-      binding.break
+
       @article = Article.new(article_params)
       @article.user = current_user #use current_user method instead of hard coding
       if @article.save
         flash[:notice] = "Your article was successfully created!"
         redirect_to @article
-      else   
+      else
         render 'new'
-      end  
+      end
     end
 
     def update
       if @article.update(article_params)
         flash[:notice] = "Your article was successfully updated"
         redirect_to @article
-      else    
+      else
         render :edit, status: :unprocessable_entity
       end
-      
+
     end
 
     def destroy
@@ -49,7 +49,7 @@ class ArticlesController < ApplicationController
 
 
     private
-    
+
     def set_article
       @article = Article.find(params[:id])
     end
